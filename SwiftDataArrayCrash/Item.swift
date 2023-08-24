@@ -12,10 +12,16 @@ import SwiftData
 final class Item {
     var timestamp: Date
     var child: Child
+//    let times: [TimeInterval]
 
-    init(timestamp: Date, child: Child) {
+    init(
+        timestamp: Date,
+        child: Child
+//        times: [TimeInterval]
+    ) {
         self.timestamp = timestamp
         self.child = child
+//        self.times = times
     }
 }
 

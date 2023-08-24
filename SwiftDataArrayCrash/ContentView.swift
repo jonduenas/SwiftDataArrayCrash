@@ -25,6 +25,9 @@ struct ContentView: View {
                             ForEach(item.child.times, id: \.self) { time in
                                 Text(time.formatted())
                             }
+//                            ForEach(item.times, id: \.self) { time in
+//                                Text(time.formatted())
+//                            }
                         }
                     }
                 }
@@ -47,7 +50,14 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date(), child: .init(times: [41, 42, 43]))
+            let newItem = Item(
+                timestamp: Date(),
+                child: .init(times: [41, 42, 43])
+            )
+//            let newItem = Item(
+//                timestamp: Date(),
+//                times: [41, 42, 43]
+//            )
             modelContext.insert(newItem)
         }
     }
