@@ -11,8 +11,14 @@ import SwiftData
 @Model
 final class Item {
     var timestamp: Date
-    
-    init(timestamp: Date) {
+    var child: Child
+
+    init(timestamp: Date, child: Child) {
         self.timestamp = timestamp
+        self.child = child
     }
+}
+
+struct Child: Codable {
+    let times: [TimeInterval]
 }
